@@ -23,7 +23,25 @@ namespace Tarea1
                         break;
 
                     case "circulo":
-                        Console.WriteLine("prueba")
+                        Console.WriteLine("ingrese radio");
+                        r = float.Parse(Console.ReadLine());
+                        Console.WriteLine("perimetro o area");
+                        string v = Console.ReadLine();
+                        Circulo c1 = new Circulo(r);
+                        switch (v)
+                        {
+                            case "area":
+                                Console.WriteLine("Su area es:" + c1.Area());
+                                break;
+
+                            case "perimetro":
+                                Console.WriteLine("su perimetro es: " + c1.Perimetro());
+                                break;
+                            default:
+                                Console.WriteLine("no valido");
+                                break;
+
+                        }
                         break;
 
                     case "´triangulo":
